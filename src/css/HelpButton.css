@@ -1,0 +1,13 @@
+#help-button {
+    width: 130px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 50px;
+    color: white;
+    border-color: white;
+}
+
+#help-button:hover {
+    background-color: white;
+    color: black;
+}
