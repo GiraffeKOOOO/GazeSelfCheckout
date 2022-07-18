@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
+import StartButton from '../components/StartButton';
 
 import '../css/StartPage.css';
 import { Button } from '@mui/material';
@@ -36,11 +37,7 @@ function StartPage() {
             <div id='placeholder'></div>
           </Grid>
           <Grid item xs={2}/>
-          <Button variant="contained" id='start-button' onClick={
-            () => {
-              window.location.href="basket_page";
-            }
-          }>Start</Button>
+            <StartButton/>
         </Grid>
 
       </Container>

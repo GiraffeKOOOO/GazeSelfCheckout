@@ -1,0 +1,14 @@
+#start-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 40px;
+    font-size: 19px;
+    background-color: #48C7FF;
+    color: black;
+    border-radius: 20px;
+}
+
+#start-button:hover {
+    background-color: #00aef8;
+}
