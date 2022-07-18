@@ -1,0 +1,14 @@
+#product-button {
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+    border-radius: 50px;
+    color: black;
+    border-color: rgb(115, 115, 115);
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+#product-button:hover {
+    background-color: rgb(224, 223, 223);
+}

@@ -1,0 +1,24 @@
+#basket-page-container {
+    padding: 0;
+}
+
+#left-grid {
+    background-color: red;
+}
+
+#right-grid {
+    background-color: #48C7FF;
+    padding-top: 10px;
+}
+
+#help-button-grid {
+    margin-left: -20px;
+}
+
+#product-button-grid {
+    margin-top: 80px;
+}
+
+#pay-button-grid {
+    margin-top: 95px;
+}
