@@ -35,13 +35,10 @@ function BasketPage() {
                 justifyContent="flex-start"
                 alignItems="center"
               >
-              <Grid item xs={7} id='cart-item-title'>Item name</Grid>
-              <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
-              <Grid item xs={2} id='cart-item-price'>Price</Grid>
-            </Grid>
-
-              
-              
+                <Grid item xs={7} id='cart-item-title'>Item name</Grid>
+                <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
+                <Grid item xs={2} id='cart-item-price'>Price</Grid>
+              </Grid>
             </Grid>
 
             <Grid id='bottom-row' 
