@@ -6,7 +6,9 @@ import '../css/BackStartButton.css';
 
 function BackStartButton() {
     return (
-        <Button variant="outlined" id='back-start-button' 
+        <Button 
+            variant="outlined" 
+            id='back-start-button' 
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="/" }, 250)
