@@ -1,0 +1,22 @@
+#payment-method-button {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #48C7FF;
+    color: black;
+}
+
+#payment-method-button:hover {
+    background-color: #00aef8;
+}
+
+#payment-button-image {
+    width: 250px;
+    height: 200px;
+}
+
+#payment-button-text {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 28px;
+}
