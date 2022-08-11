@@ -1,14 +1,14 @@
 #help-button {
-    width: 130px;
-    height: 55px;
-    font-size: 20px;
+    width: 230px;
+    height: 85px;
+    font-size: 35px;
     border-radius: 50px;
     color: white;
     border-color: white;
 }
 
 #help-button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.96);
     border-color: black;
     color: black;
 }

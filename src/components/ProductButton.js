@@ -8,10 +8,10 @@ function ProductButton(props) {
         <Button variant="outlined" id='product-button' 
             onClick={
                 () => {
-                    if(props.ProductName === 'All Products'){
-                        window.location.href="all_products";
+                    if(props.ProductName === 'Search Item'){
+                        setTimeout(() => { window.location.href="search_item" }, 250)
                     } else {
-                        window.location.href=props.ProductName;
+                        setTimeout(() => { window.location.href=props.ProductName }, 250)
                     }
                 }
             }
