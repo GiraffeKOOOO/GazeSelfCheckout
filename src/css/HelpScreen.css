@@ -1,0 +1,45 @@
+#help-screen-grid {
+    width: 1920px;
+    height: 970px;
+    background-color: white;
+}
+
+#help-title-grid-item {
+    background-color: #48C7FF;
+    padding-bottom: 20px;
+}
+
+#help-cancel-grid {
+    height: 750px
+}
+
+#help-title {
+    font-size: 60px;
+    margin: 10px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+/* --------- */
+
+#cancel-modal-button {
+    width: 280px;
+    height: 80px;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    background-color: #48C7FF;
+}
+
+#cancel-modal-button:hover {
+    background-color: #00aef8;
+}
+
+#help-image {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 60%;
+}

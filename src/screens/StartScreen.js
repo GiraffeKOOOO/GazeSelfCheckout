@@ -3,12 +3,11 @@ import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import StartButton from '../components/StartButton';
 
-import '../css/StartPage.css';
+import '../css/StartScreen.css';
 
-function StartPage() {
+function StartScreen() {
   return (
       <>
-
         <Grid container id='first-row'>
           <Grid item xs={2}/>
           <Grid item xs={8}>
@@ -41,9 +40,8 @@ function StartPage() {
           <Grid item xs={2}/>
             <StartButton/>
         </Grid>
-
       </>
   );
 }
 
-export default StartPage;
+export default StartScreen;

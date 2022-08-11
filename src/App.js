@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StartPage from './pages/StartPage';
-import BasketPage from './pages/BasketPage';
+import StartScreen from './screens/StartScreen';
+import BasketScreen from './screens/BasketScreen';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<StartPage />}/>
-        <Route path="/basket_page" element={<BasketPage />}/>
+        <Route path="/" element={<StartScreen />}/>
+        <Route path="/basket_screen" element={<BasketScreen />}/>
       </Routes>
     </BrowserRouter>
   );
