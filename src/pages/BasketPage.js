@@ -11,17 +11,16 @@ import '../css/BasketPage.css';
 
 function BasketPage() {
   return (
-      <Container id='basket-page-container'>
-
+      <>
         <Grid container id='basket-page-grid'>
 
-          <Grid id='left-grid' item xs={9}>
+          <Grid id='left-grid' item xs={10}>
             <Grid id='title-grid' 
               container
               justifyContent="flex-start"
               alignItems="flex-start"
             >
-              <h2 id="item-counter"><ShoppingCartIcon/> Cart Total 000</h2>
+              <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total 000</h2>
             </Grid>
 
             <Grid id='cart-grid' 
@@ -35,7 +34,7 @@ function BasketPage() {
                 justifyContent="flex-start"
                 alignItems="center"
               >
-                <Grid item xs={7} id='cart-item-title'>Item name</Grid>
+                <Grid item xs={7.8} id='cart-item-title'>Item name</Grid>
                 <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
                 <Grid item xs={2} id='cart-item-price'>Price</Grid>
               </Grid>
@@ -43,18 +42,25 @@ function BasketPage() {
 
             <Grid id='bottom-row' 
               container
+              direction="row"
               justifyContent="flex-start"
               alignItems="flex-start"
             >
-              
+                <Grid item xs={10}>Cancel Button</Grid>
+                <Grid item xs={2}>
+                  <Grid container>
+                    <Grid item>Quantity</Grid>
+                    <Grid item>Price</Grid>
+                  </Grid>
+                </Grid>            
             </Grid>
 
           </Grid>
 
-          <Grid id='right-grid' item xs={3}>
+          <Grid id='right-grid' item xs={2}>
             <Grid id='help-button-grid' 
               container 
-              justifyContent="flex-end" 
+              justifyContent="center" 
               alignItems="center"
             >
               <HelpButton/>
@@ -66,7 +72,7 @@ function BasketPage() {
               alignItems="center"
             >
               <ProductButton
-                ProductName="All Products"
+                ProductName="Search Item"
               />
               <ProductButton
                 ProductName="Bakery"
@@ -89,8 +95,7 @@ function BasketPage() {
           </Grid>
 
         </Grid>
-
-      </Container>
+      </>
   );
 }
 

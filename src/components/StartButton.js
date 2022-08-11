@@ -7,7 +7,7 @@ function StartButton() {
     return (
         <Button variant="contained" id='start-button' onClick={
             () => {
-              window.location.href="basket_page";
+              setTimeout(() => { window.location.href="basket_page" }, 250)
             }
           }>Start</Button>
     );

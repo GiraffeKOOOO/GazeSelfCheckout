@@ -9,7 +9,7 @@ function PayButton() {
         <Button variant="outlined" id='pay-button' 
             onClick={
                 () => {
-                    window.location.href="pay_page";
+                    setTimeout(() => { window.location.href="pay_page" }, 250)
                 }
             }
         >Pay<ArrowCircleRightIcon fontSize="large" style={{"marginLeft":"10px"}}/></Button>
