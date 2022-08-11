@@ -41,7 +41,15 @@
 }
 
 #bottom-row {
+    margin-left: 10px;
     border-top: 1px solid rgb(173, 173, 173);
+    border-bottom: 1px solid rgb(173, 173, 173);
+    height: 160px;
+}
+
+.cart-total-text {
+    font-size: 40px;
+    margin: 0;
 }
 
 /* right side */

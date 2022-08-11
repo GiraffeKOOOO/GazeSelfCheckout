@@ -1,9 +1,9 @@
 import React from 'react';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import ProductButton from '../components/ProductButton';
 import PayButton from '../components/PayButton';
+import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import '../css/BasketPage.css';
@@ -44,13 +44,18 @@ function BasketPage() {
               container
               direction="row"
               justifyContent="flex-start"
-              alignItems="flex-start"
+              alignItems="center"
             >
-                <Grid item xs={10}>Cancel Button</Grid>
+                <Grid item xs={10}><BackStartButton/></Grid>
                 <Grid item xs={2}>
-                  <Grid container>
-                    <Grid item>Quantity</Grid>
-                    <Grid item>Price</Grid>
+                  <Grid 
+                    container
+                    direction="column"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                  >
+                    <Grid item><h1 className='cart-total-text'>Subtotal</h1></Grid>
+                    <Grid item><h1 className='cart-total-text'>£00.00</h1></Grid>
                   </Grid>
                 </Grid>            
             </Grid>
