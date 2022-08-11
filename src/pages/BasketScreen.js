@@ -6,10 +6,10 @@ import PayButton from '../components/PayButton';
 import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-import '../css/BasketPage.css';
+import '../css/BasketScreen.css';
 
 
-function BasketPage() {
+function BasketScreen() {
   return (
       <>
         <Grid container id='basket-page-grid'>
@@ -104,4 +104,4 @@ function BasketPage() {
   );
 }
 
-export default BasketPage;
+export default BasketScreen;
