@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StartScreen from './pages/StartScreen';
-import BasketScreen from './pages/BasketScreen';
+import StartScreen from './screens/StartScreen';
+import BasketScreen from './screens/BasketScreen';
 
 function App() {
   return (
