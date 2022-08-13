@@ -12,7 +12,7 @@ function PaymentMethodButton(props) {
         return(
             <Button variant="outlined" id='payment-method-button' 
                 onClick={
-                    () => { setTimeout(() => { window.location.href="payment_card" }, 250)}
+                    () => { setTimeout(() => { window.location.href="payment/?type=card" }, 250)}
                 }
             >
                 <Grid
@@ -30,7 +30,7 @@ function PaymentMethodButton(props) {
         return(
             <Button variant="outlined" id='payment-method-button' 
                 onClick={
-                    () => { setTimeout(() => { window.location.href="payment_gift_card" }, 250)}
+                    () => { setTimeout(() => { window.location.href="payment/?type=gift" }, 250)}
                 }
             >
                 <Grid
@@ -48,7 +48,7 @@ function PaymentMethodButton(props) {
         return(
             <Button variant="outlined" id='payment-method-button' 
                 onClick={
-                    () => { setTimeout(() => { window.location.href="payment_coupon" }, 250)}
+                    () => { setTimeout(() => { window.location.href="payment/?type=coupon" }, 250)}
                 }
             >
                 <Grid
