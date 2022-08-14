@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import PaymentMethodButton from '../components/PaymentMethodButton';
 import BackBasketButton from '../components/BackBasketButton';
+import BackPayButton from '../components/BackPayButton';
 import cardImage from '../media/card.png';
 import giftImage from '../media/gift.png';
 import couponImage from '../media/coupon.png';
@@ -50,7 +51,7 @@ function PaymentMethodScreen() {
                       </Grid>
                   </Grid>
 
-                  <Grid item id='payment-methods-row'>
+                  <Grid item id='payment-method-image-row'>
                     <Grid
                         container
                         direction="row"
@@ -59,13 +60,16 @@ function PaymentMethodScreen() {
                         id='payment-button-container'
                     >
                         <Grid item xs={2}/>
-                        <img src={cardImage} alt="cardImage" id='payment-image'/>
+                            <div id='payment-image-div'>                            
+                                <img src={cardImage} alt="cardImage" id='payment-image'/>
+                                <p id='payment-image-text' className='selected-font'>Card</p>
+                            </div>
                         <Grid item xs={2}/>
                     </Grid>
                 </Grid>
 
                 <Grid item id='cancel-button-row'>
-                    <BackBasketButton/>
+                    <BackPayButton/>
                 </Grid>
       
               </Grid>

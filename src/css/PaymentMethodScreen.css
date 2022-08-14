@@ -1,3 +1,28 @@
+#payment-image-div {
+    background-color: #48C7FF;
+    border: 1px solid black;
+    border-radius: 60px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#payment-image-text {
+    margin: 0px;
+    font-size: 30px;
+}
+
 #payment-image {
-    
+    width: 430px;
+    height: 430px;
+}
+
+#payment-method-image-row {
+    margin-top: 70px;
+}
+
+#cancel-button-row {
+    margin-top: 50px;
 }
