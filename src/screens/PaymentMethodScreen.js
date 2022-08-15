@@ -1,9 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
-import PaymentMethodButton from '../components/PaymentMethodButton';
-import BackBasketButton from '../components/BackBasketButton';
 import BackPayButton from '../components/BackPayButton';
+import SkipPayButton from '../components/SkipPayButton';
 import cardImage from '../media/card.png';
 import giftImage from '../media/gift.png';
 import couponImage from '../media/coupon.png';
@@ -70,6 +69,7 @@ function PaymentMethodScreen() {
 
                 <Grid item id='cancel-button-row'>
                     <BackPayButton/>
+                    <SkipPayButton/>
                 </Grid>
       
               </Grid>
@@ -111,6 +111,28 @@ function PaymentMethodScreen() {
                           </Grid>
                       </Grid>
                   </Grid>
+
+                  <Grid item id='payment-method-image-row'>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-evenly"
+                        alignItems="center"
+                        id='payment-button-container'
+                    >
+                        <Grid item xs={2}/>
+                            <div id='payment-image-div'>                            
+                                <img src={giftImage} alt="giftImage" id='payment-image'/>
+                                <p id='payment-image-text' className='selected-font'>Gift Card</p>
+                            </div>
+                        <Grid item xs={2}/>
+                    </Grid>
+                </Grid>
+
+                <Grid item id='cancel-button-row'>
+                    <BackPayButton/>
+                    <SkipPayButton/>
+                </Grid>
       
               </Grid>
             </>
@@ -151,6 +173,28 @@ function PaymentMethodScreen() {
                           </Grid>
                       </Grid>
                   </Grid>
+
+                  <Grid item id='payment-method-image-row'>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-evenly"
+                        alignItems="center"
+                        id='payment-button-container'
+                    >
+                        <Grid item xs={2}/>
+                            <div id='payment-image-div'>                            
+                                <img src={couponImage} alt="couponImage" id='payment-image'/>
+                                <p id='payment-image-text' className='selected-font'>Coupon</p>
+                            </div>
+                        <Grid item xs={2}/>
+                    </Grid>
+                </Grid>
+
+                <Grid item id='cancel-button-row'>
+                    <BackPayButton/>
+                    <SkipPayButton/>
+                </Grid>
       
               </Grid>
             </>

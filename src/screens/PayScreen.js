@@ -59,7 +59,16 @@ function PayScreen() {
             </Grid>
 
             <Grid item id='cancel-button-row'>
-                <BackBasketButton/>
+                <Grid
+                    container
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    id='cancel-row-payscreen'
+                >
+                    <BackBasketButton/>
+                </Grid>
+                
             </Grid>
 
         </Grid>
