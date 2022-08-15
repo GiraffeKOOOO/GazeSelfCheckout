@@ -1,0 +1,14 @@
+#search-back-button {
+    width: 230px;
+    height: 85px;
+    font-size: 28px;
+    border-radius: 50px;
+    color: black;
+    border-color: rgb(188, 188, 188);
+    background-color: rgb(255, 255, 255);
+}
+
+#search-back-button:hover {
+    background-color: rgba(215, 215, 215, 0.96);
+    border-color: rgb(108, 108, 108);
+}

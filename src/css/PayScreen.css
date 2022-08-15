@@ -1,0 +1,36 @@
+#title-row {
+    width: 100%;
+    background-color: #48C7FF;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+#total-string-value {
+    font-size: 70px;
+    margin: 5px;
+}
+
+#payment-instructions-text {
+    font-size: 25px;
+    margin: 0px;
+}
+
+/*----------------*/
+
+#payment-methods-row {
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 20px;
+}
+
+/*----------------*/
+
+#cancel-button-row {
+    width: 100%;
+    margin-top: 230px;
+    padding-left: 20px;
+}
+
+#cancel-row-payscreen {
+    margin-top: 70px;
+}

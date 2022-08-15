@@ -1,0 +1,13 @@
+#back-basket-button {
+    width: 280px;
+    height: 80px;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    background-color: #48C7FF;
+    margin-bottom: 10px;
+}
+
+#back-basket-button:hover {
+    background-color: #00aef8;
+}
