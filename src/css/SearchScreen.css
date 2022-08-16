@@ -21,7 +21,7 @@
 
 #product-result-row {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -29,5 +29,15 @@
 
 #keyboard-row-1 {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 40px;
+}
+
+#keyboard-row-2 {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#keyboard-row-3 {
+    width: 100%;
+    margin-top: 40px;
 }

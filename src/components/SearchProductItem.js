@@ -1,7 +1,12 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 
 import '../css/SearchProductItem.css';
+
+import apple from '../media/apple.png';
+import banana from '../media/banana.png';
+import watermelon from '../media/watermelon.png';
 
 function SearchProductItem(props) {
     return (
@@ -13,7 +18,17 @@ function SearchProductItem(props) {
                     console.log(props.productName)
                 }
             }
-        >{props.productName}</Button>
+        >
+            <Grid
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <img src={props.image} alt="itemButtonImage" id='item-button-image'/>
+                    <p id='item-button-text' className='selected-font'>{props.productName}</p>
+            </Grid>        
+        </Button>
     );
   }
   

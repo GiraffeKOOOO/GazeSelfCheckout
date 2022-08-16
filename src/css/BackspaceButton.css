@@ -1,0 +1,12 @@
+#backspace-button {
+    width: 350px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: #48C7FF;
+    color: black;
+    font-size: 25px;
+}
+
+#backspace-button:hover {
+    background-color: #00aef8;
+}

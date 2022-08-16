@@ -1,0 +1,12 @@
+#spacebar-button {
+    width: 600px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: #48C7FF;
+    color: black;
+    font-size: 30px;
+}
+
+#spacebar-button:hover {
+    background-color: #00aef8;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import SearchBackButton from '../components/SearchBackButton';
@@ -8,10 +8,22 @@ import SearchIcon from '@mui/icons-material/Search';
 import PageForwardButton from '../components/PageForwardButton';
 import PageBackwardButton from '../components/PageBackwardButton';
 import SearchProductItem from '../components/SearchProductItem';
+import KeyboardButton from '../components/KeyboardButton';
+import SpacebarButton from '../components/SpacebarButton';
+import BackspaceButton from '../components/BackspaceButton';
+
+import apple from '../media/apple.png';
+import banana from '../media/banana.png';
+import watermelon from '../media/watermelon.png';
 
 import '../css/SearchScreen.css';
 
 function SearchScreen() {
+    const [searchString, setSearchString] = useState("");
+
+    const keyboardRow1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
+    const keyboardRow2 = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
     return (
         <>
             <Grid
@@ -66,6 +78,7 @@ function SearchScreen() {
                                         ),
                                     }}
                                 autoComplete="off"
+                                value={searchString}
                             />
                         </Grid>
                         <Grid item xs={1}/>
@@ -89,9 +102,9 @@ function SearchScreen() {
                                 justifyContent="space-around"
                                 alignItems="center"
                             >
-                                <SearchProductItem productName="Banana" />
-                                <SearchProductItem productName="Apple" />
-                                <SearchProductItem productName="Watermelon" />
+                                <SearchProductItem productName="Banana" image={banana}/>
+                                <SearchProductItem productName="Apple" image={apple}/>
+                                <SearchProductItem productName="Watermelon" image={watermelon}/>
                             </Grid>
                         </Grid>
                         <Grid item xs={1}>
@@ -104,13 +117,44 @@ function SearchScreen() {
                     <Grid
                         container
                         direction="row"
-                        justifyContent="center"
+                        justifyContent="space-evenly"
                         alignItems="center"
                     >
-                        
+                        {
+                            keyboardRow1.map(
+                                (iterator) => <KeyboardButton key={iterator} letter={iterator} setSearchString={setSearchString} searchString={searchString}/>
+                            )
+                        }
                     </Grid>
                 </Grid>
-    
+
+                <Grid item id='keyboard-row-2'>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-evenly"
+                        alignItems="center"
+                    >
+                        {
+                            keyboardRow2.map(
+                                (iterator) => <KeyboardButton key={iterator} letter={iterator} setSearchString={setSearchString} searchString={searchString}/>
+                            )
+                        }
+                    </Grid>
+                </Grid>
+
+                <Grid item id='keyboard-row-3'>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-evenly"
+                        alignItems="center"
+                    >
+                        <SpacebarButton setSearchString={setSearchString} searchString={searchString}/>
+                        <BackspaceButton setSearchString={setSearchString} searchString={searchString}/>
+                    </Grid>
+                </Grid>
+                        
             </Grid>
         </>
     );  
