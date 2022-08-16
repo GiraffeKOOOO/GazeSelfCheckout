@@ -1,0 +1,7 @@
+#backward-triangle-div {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 50px 25px 0;
+    border-color: transparent #48c8ff transparent transparent;
+}
