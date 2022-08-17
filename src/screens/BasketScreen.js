@@ -5,9 +5,9 @@ import ProductButton from '../components/ProductButton';
 import PayButton from '../components/PayButton';
 import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import BasketItem from '../components/BasketItem';
 
 import '../css/BasketScreen.css';
-
 
 function BasketScreen() {
   return (
@@ -38,6 +38,10 @@ function BasketScreen() {
                 <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
                 <Grid item xs={2} id='cart-item-price'>Price</Grid>
               </Grid>
+
+              <BasketItem/>
+
+
             </Grid>
 
             <Grid id='bottom-row' 
