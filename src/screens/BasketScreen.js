@@ -80,13 +80,13 @@ function BasketScreen() {
                 ProductName="Search Item"
               />
               <ProductButton
-                ProductName="bakery"
+                ProductName="Bakery"
               />
               <ProductButton
-                ProductName="fruit"
+                ProductName="Fruit"
               />
               <ProductButton
-                ProductName="vegetables"
+                ProductName="Vegetables"
               />
             </Grid>
 
