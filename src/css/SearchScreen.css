@@ -6,6 +6,38 @@
     text-align: center;
 }
 
-#title-text {
+/*----------------------*/
 
+#search-bar-row {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#product-search-bar {
+    font-size: 30px;
+}
+
+/*----------------------*/
+
+#product-result-row {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*----------------------*/
+
+#keyboard-row-1 {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#keyboard-row-2 {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#keyboard-row-3 {
+    width: 100%;
+    margin-top: 40px;
 }

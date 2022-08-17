@@ -1,0 +1,12 @@
+#keyboard-button {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #48C7FF;
+    color: black;
+    font-size: 30px;
+}
+
+#keyboard-button:hover {
+    background-color: #00aef8;
+}

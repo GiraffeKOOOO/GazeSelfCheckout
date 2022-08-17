@@ -4,9 +4,7 @@ import HelpButton from '../components/HelpButton';
 import PaymentMethodButton from '../components/PaymentMethodButton';
 import BackBasketButton from '../components/BackBasketButton';
 
-
 import '../css/PayScreen.css';
-import { Button } from '@mui/material';
 
 function PayScreen() {
   return (
