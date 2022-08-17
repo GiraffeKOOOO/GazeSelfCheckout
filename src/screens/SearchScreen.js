@@ -15,6 +15,7 @@ import BackspaceButton from '../components/BackspaceButton';
 import apple from '../media/apple.png';
 import banana from '../media/banana.png';
 import watermelon from '../media/watermelon.png';
+import carrot from '../media/carrot.png';
 
 import '../css/SearchScreen.css';
 
@@ -23,6 +24,7 @@ function SearchScreen() {
 
     const keyboardRow1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
     const keyboardRow2 = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const products = [{name: 'Banana', image: banana}, {name: 'Apple', image: apple}, {name: 'Watermelon', image: watermelon}, {name: 'Carrot', image: carrot}]
 
     return (
         <>
@@ -102,9 +104,12 @@ function SearchScreen() {
                                 justifyContent="space-around"
                                 alignItems="center"
                             >
-                                <SearchProductItem productName="Banana" image={banana}/>
-                                <SearchProductItem productName="Apple" image={apple}/>
-                                <SearchProductItem productName="Watermelon" image={watermelon}/>
+                                {
+                                    products.filter(product => product.name.includes(searchString)).slice(0,3).map((item, index) => (
+                                            <SearchProductItem key={index} productName={item.name} image={item.image}/>
+                                        )
+                                    )
+                                }
                             </Grid>
                         </Grid>
                         <Grid item xs={1}>

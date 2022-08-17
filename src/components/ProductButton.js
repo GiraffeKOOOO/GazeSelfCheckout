@@ -11,7 +11,7 @@ function ProductButton(props) {
                     if(props.ProductName === 'Search Item'){
                         setTimeout(() => { window.location.href="search_item" }, 250)
                     } else {
-                        setTimeout(() => { window.location.href=props.ProductName }, 250)
+                        setTimeout(() => { window.location.href='/product_category/?category=' + props.ProductName }, 250)
                     }
                 }
             }

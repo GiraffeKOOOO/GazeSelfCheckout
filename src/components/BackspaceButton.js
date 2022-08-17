@@ -4,14 +4,14 @@ import BackspaceIcon from '@mui/icons-material/Backspace';
 
 import '../css/BackspaceButton.css';
 
-function BackspaceButton() {
+function BackspaceButton(props) {
     return (
         <Button 
             variant="outlined" 
             id='backspace-button' 
             onClick={
                 () => {
-                    console.log('Backspace')
+                    props.setSearchString(props.searchString.slice(0, -1));
                 }
             }
         ><BackspaceIcon fontSize="large" style={{"marginRight":"15px"}}/>Backspace</Button>
