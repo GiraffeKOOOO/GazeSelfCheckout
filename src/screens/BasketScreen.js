@@ -9,6 +9,9 @@ import BasketItem from '../components/BasketItem';
 
 import '../css/BasketScreen.css';
 
+import apple from '../media/apple.png';
+import banana from '../media/banana.png';
+
 function BasketScreen() {
   return (
       <>
@@ -17,31 +20,32 @@ function BasketScreen() {
           <Grid id='left-grid' item xs={10}>
             <Grid id='title-grid' 
               container
-              justifyContent="flex-start"
-              alignItems="flex-start"
+              justifyContent="center"
             >
               <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total 000</h2>
             </Grid>
 
             <Grid id='cart-grid' 
               container
-              justifyContent="flex-start"
-              alignItems="flex-start"
+              direction="column"
             >
               <Grid id='cart-grid-title' 
                 container
                 direction="row"
-                justifyContent="flex-start"
-                alignItems="center"
               >
                 <Grid item xs={7.8} id='cart-item-title'>Item name</Grid>
                 <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
                 <Grid item xs={2} id='cart-item-price'>Price</Grid>
               </Grid>
 
-              <BasketItem/>
-
-
+              <Grid id='cart-item-grid' 
+                container
+              >
+                <BasketItem itemImage={apple} itemName='Apple' itemQuantity={2} itemPrice={1.20}/>
+                <BasketItem itemImage={banana} itemName='Banana' itemQuantity={1} itemPrice={0.60}/>
+                
+              </Grid>
+              
             </Grid>
 
             <Grid id='bottom-row' 

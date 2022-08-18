@@ -18,6 +18,7 @@
 }
 
 #cart-grid-title {
+    width: 1580px;
     background-color: #48C7FF;
     border-radius: 5px;
     border: solid 1px rgb(173, 173, 173);
@@ -38,6 +39,10 @@
 
 #cart-item-price {
     text-align: center;
+}
+
+#cart-item-grid {
+    
 }
 
 #bottom-row {
