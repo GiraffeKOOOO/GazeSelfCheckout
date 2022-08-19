@@ -24,7 +24,7 @@ function SearchScreen() {
 
     const keyboardRow1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
     const keyboardRow2 = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const products = [{name: 'Banana', image: banana}, {name: 'Apple', image: apple}, {name: 'Watermelon', image: watermelon}, {name: 'Carrot', image: carrot}]
+    const products = [{name: 'banana', image: banana}, {name: 'apple', image: apple}, {name: 'watermelon', image: watermelon}, {name: 'carrot', image: carrot}]
 
     return (
         <>
