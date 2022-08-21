@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import ProductButton from '../components/ProductButton';
@@ -6,12 +6,19 @@ import PayButton from '../components/PayButton';
 import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BasketItem from '../components/BasketItem';
+import CartContext from '../components/CartContext';
+
 import '../css/BasketScreen.css';
 
 import apple from '../media/apple.png';
 import banana from '../media/banana.png';
 
 function BasketScreen() {
+  const { cartItems, cartTotal, cartQuantity } = useContext(CartContext);
+
+  function addTrailingZeros(num, totalLength) {
+    return String(num).padEnd(totalLength, '0');
+  }
 
   return (
       <>
@@ -22,7 +29,7 @@ function BasketScreen() {
               container
               justifyContent="center"
             >
-              <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total 000</h2>
+              <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total {cartQuantity}</h2>
             </Grid>
 
             <Grid id='cart-grid' 
@@ -41,9 +48,15 @@ function BasketScreen() {
               <Grid id='cart-item-grid' 
                 container
               >
-                <BasketItem itemImage={apple} itemName='Apple' itemQuantity={2} itemPrice={1.20}/>
-                <BasketItem itemImage={banana} itemName='Banana' itemQuantity={1} itemPrice={0.60}/>
-                
+                {cartItems.map((item, index) => (
+                  <BasketItem 
+                      key={index} 
+                      itemImage={item.image} 
+                      itemName={item.name} 
+                      itemQuantity={item.quantity} 
+                      itemPrice={item.price}
+                    />
+                ))}
               </Grid>
               
             </Grid>
@@ -63,7 +76,7 @@ function BasketScreen() {
                     alignItems="center"
                   >
                     <Grid item><h1 className='cart-total-text'>Subtotal</h1></Grid>
-                    <Grid item><h1 className='cart-total-text'>£00.00</h1></Grid>
+                    <Grid item><h1 className='cart-total-text'>£{cartTotal}</h1></Grid>
                   </Grid>
                 </Grid>            
             </Grid>

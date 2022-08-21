@@ -15,7 +15,7 @@ function ProductCategoryPage() {
     const queryParams = new URLSearchParams(window.location.search)
     const category = queryParams.get('category');
 
-    const products = [{name: 'Banana', category: 'Fruit', image: banana}, {name: 'Apple', category: 'Fruit', image: apple}, {name: 'Watermelon', category: 'Fruit', image: watermelon}, {name: 'Carrot', category: 'Vegetables', image: carrot}]
+    const products = [{name: 'Banana', price: 0.60, category: 'Fruit', image: banana}, {name: 'Apple', price: 0.80, category: 'Fruit', image: apple}, {name: 'Watermelon', price: 1.00, category: 'Fruit', image: watermelon}, {name: 'Carrot', price: 0.40, category: 'Vegetables', image: carrot}]
 
     return (
         <>
@@ -63,7 +63,7 @@ function ProductCategoryPage() {
                             >
                                 {
                                     products.map((item, index) => (
-                                            (item.category === category? <SearchProductItem key={index} productName={item.name} image={item.image}/> : "" )
+                                            (item.category === category? <SearchProductItem key={index} productName={item.name} productPrice={item.price} productImage={item.image}/> : "" )
                                         )
                                     )
                                 }

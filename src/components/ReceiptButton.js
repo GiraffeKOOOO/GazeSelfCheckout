@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '@mui/material/Button';
+import CartContext from '../components/CartContext';
 
 import '../css/ReceiptButton.css';
 
 function ReceiptButton(props) {
+    const { clearCart } = useContext(CartContext);
+
     return (
         <Button 
             variant="outlined" 
             id='receipt-button' 
             onClick={
                 () => {
+                    clearCart()
                     setTimeout(() => { window.location.href="/" }, 250)
                 }
             }

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import PaymentMethodButton from '../components/PaymentMethodButton';
 import BackBasketButton from '../components/BackBasketButton';
+import CartContext from '../components/CartContext';
 
 import '../css/PayScreen.css';
 
 function PayScreen() {
+    const { cartTotal } = useContext(CartContext);
+
   return (
       <>
         <Grid
@@ -32,7 +35,7 @@ function PayScreen() {
                             justifyContent="center"
                             alignItems="center"
                         >
-                            <h1 id='total-string-value' className='selected-font'>Total £000</h1>
+                            <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
                             <p id='payment-instructions-text' className='selected-font'>Please select a method of payment</p>
                         </Grid>
                     </Grid>

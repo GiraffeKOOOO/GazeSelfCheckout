@@ -6,7 +6,7 @@ import CartContext from './CartContext';
 import '../css/SearchProductItem.css';
 
 function SearchProductItem(props) {
-    const { cartItems } = useContext(CartContext)
+    const { addToCart, cartItems} = useContext(CartContext);
 
     return (
         <Button 
@@ -14,7 +14,8 @@ function SearchProductItem(props) {
             id='search-product-item' 
             onClick={
                 () => {
-                    console.log(cartItems)
+                    addToCart(props.productName, props.productPrice, 1)
+                    console.log(cartItems)   
                 }
             }
         >
@@ -24,7 +25,7 @@ function SearchProductItem(props) {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <img src={props.image} alt="itemButtonImage" id='item-button-image'/>
+                    <img src={props.productImage} alt="itemButtonImage" id='item-button-image'/>
                     <p id='item-button-text' className='selected-font'>{props.productName}</p>
             </Grid>        
         </Button>
