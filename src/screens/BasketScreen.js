@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import ProductButton from '../components/ProductButton';
 import PayButton from '../components/PayButton';
 import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import BasketItem from '../components/BasketItem';
+import CartContext from '../components/CartContext';
 
 import '../css/BasketScreen.css';
 
+import apple from '../media/apple.png';
+import banana from '../media/banana.png';
 
 function BasketScreen() {
+  const { cartItems, cartTotal, cartQuantity } = useContext(CartContext);
+
+  function addTrailingZeros(num, totalLength) {
+    return String(num).padEnd(totalLength, '0');
+  }
+
   return (
       <>
         <Grid container id='basket-page-grid'>
@@ -17,27 +27,38 @@ function BasketScreen() {
           <Grid id='left-grid' item xs={10}>
             <Grid id='title-grid' 
               container
-              justifyContent="flex-start"
-              alignItems="flex-start"
+              justifyContent="center"
             >
-              <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total 000</h2>
+              <h2 id="item-counter"><ShoppingCartIcon fontSize='large'/> Cart Total {cartQuantity}</h2>
             </Grid>
 
             <Grid id='cart-grid' 
               container
-              justifyContent="flex-start"
-              alignItems="flex-start"
+              direction="column"
             >
               <Grid id='cart-grid-title' 
                 container
                 direction="row"
-                justifyContent="flex-start"
-                alignItems="center"
               >
                 <Grid item xs={7.8} id='cart-item-title'>Item name</Grid>
                 <Grid item xs={2} id='cart-item-quantity'>Quantity</Grid>
                 <Grid item xs={2} id='cart-item-price'>Price</Grid>
               </Grid>
+
+              <Grid id='cart-item-grid' 
+                container
+              >
+                {cartItems.map((item, index) => (
+                  <BasketItem 
+                      key={index} 
+                      itemImage={item.image} 
+                      itemName={item.name} 
+                      itemQuantity={item.quantity} 
+                      itemPrice={item.price}
+                    />
+                ))}
+              </Grid>
+              
             </Grid>
 
             <Grid id='bottom-row' 
@@ -55,7 +76,7 @@ function BasketScreen() {
                     alignItems="center"
                   >
                     <Grid item><h1 className='cart-total-text'>Subtotal</h1></Grid>
-                    <Grid item><h1 className='cart-total-text'>£00.00</h1></Grid>
+                    <Grid item><h1 className='cart-total-text'>£{cartTotal}</h1></Grid>
                   </Grid>
                 </Grid>            
             </Grid>
@@ -80,13 +101,13 @@ function BasketScreen() {
                 ProductName="Search Item"
               />
               <ProductButton
-                ProductName="bakery"
+                ProductName="Bakery"
               />
               <ProductButton
-                ProductName="fruit"
+                ProductName="Fruit"
               />
               <ProductButton
-                ProductName="vegetables"
+                ProductName="Vegetables"
               />
             </Grid>
 

@@ -11,7 +11,7 @@ function SearchBackButton() {
             id='search-back-button' 
             onClick={
                 () => {
-                    setTimeout(() => { window.location.href="basket_screen" }, 250)
+                    setTimeout(() => { window.location.href="/basket_screen" }, 250)
                 }
             }
         ><ArrowBackIosNewIcon fontSize="large" style={{"marginRight":"5px"}}/>Cancel</Button>

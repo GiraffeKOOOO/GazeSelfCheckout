@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import BackPayButton from '../components/BackPayButton';
@@ -6,12 +6,14 @@ import SkipPayButton from '../components/SkipPayButton';
 import cardImage from '../media/card.png';
 import giftImage from '../media/gift.png';
 import couponImage from '../media/coupon.png';
+import CartContext from '../components/CartContext';
 
 import '../css/PaymentMethodScreen.css';
 
 function PaymentMethodScreen() {
     const queryParams = new URLSearchParams(window.location.search)
     const type = queryParams.get('type');
+    const { cartTotal } = useContext(CartContext);
  
     if(type === 'card' ){
         // card page
@@ -40,7 +42,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £000</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your card</p>
                               </Grid>
                           </Grid>
@@ -102,7 +104,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £000</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your gift card</p>
                               </Grid>
                           </Grid>
@@ -164,7 +166,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £000</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your coupon</p>
                               </Grid>
                           </Grid>

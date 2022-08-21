@@ -4,7 +4,6 @@ import HelpButton from '../components/HelpButton';
 import SearchBackButton from '../components/SearchBackButton';
 import SearchProductItem from '../components/SearchProductItem';
 
-
 import apple from '../media/apple.png';
 import banana from '../media/banana.png';
 import watermelon from '../media/watermelon.png';
@@ -13,7 +12,10 @@ import carrot from '../media/carrot.png';
 import '../css/ProductCategoryPage.css';
 
 function ProductCategoryPage() {
-    const products = [{name: 'Banana', image: banana}, {name: 'Apple', image: apple}, {name: 'Watermelon', image: watermelon}, {name: 'Carrot', image: carrot}]
+    const queryParams = new URLSearchParams(window.location.search)
+    const category = queryParams.get('category');
+
+    const products = [{name: 'Banana', price: 0.60, category: 'Fruit', image: banana}, {name: 'Apple', price: 0.80, category: 'Fruit', image: apple}, {name: 'Watermelon', price: 1.00, category: 'Fruit', image: watermelon}, {name: 'Carrot', price: 0.40, category: 'Vegetables', image: carrot}]
 
     return (
         <>
@@ -25,7 +27,7 @@ function ProductCategoryPage() {
                 id='search-screen-container'
             >
     
-                <Grid item id='search-title-row'>
+                <Grid item id='category-title-row'>
                     <Grid
                         container
                         direction="row"
@@ -37,7 +39,7 @@ function ProductCategoryPage() {
                             <SearchBackButton/>
                         </Grid>
                         <Grid item xs={8}>
-                            <h1 id='title-text' className='selected-font'>Product Search</h1>
+                            <h1 id='title-text' className='selected-font'>{category} products</h1>
                         </Grid>
                         <Grid item xs={2}>
                             <HelpButton/>
@@ -45,16 +47,14 @@ function ProductCategoryPage() {
                     </Grid>
                 </Grid>
 
-                <Grid item id='product-result-row'>
+                <Grid item id='product-row'>
                     <Grid
                         container
                         direction="row"
                         justifyContent="center"
                         alignItems="center"
                     >
-                        <Grid item xs={1}>
-                        </Grid>
-                        <Grid item xs={10}>
+                        <Grid item xs={12}>
                             <Grid
                                 container
                                 direction="row"
@@ -63,13 +63,11 @@ function ProductCategoryPage() {
                             >
                                 {
                                     products.map((item, index) => (
-                                            <SearchProductItem key={index} productName={item.name} image={item.image}/>
+                                            (item.category === category? <SearchProductItem key={index} productName={item.name} productPrice={item.price} productImage={item.image}/> : "" )
                                         )
                                     )
                                 }
                             </Grid>
-                        </Grid>
-                        <Grid item xs={1}>
                         </Grid>
                     </Grid>
                 </Grid>
