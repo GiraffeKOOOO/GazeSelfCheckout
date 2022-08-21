@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useContext }  from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import CartContext from './CartContext';
 
 import '../css/SearchProductItem.css';
 
 function SearchProductItem(props) {
+    const { cartItems } = useContext(CartContext)
+
     return (
         <Button 
             variant="outlined" 
             id='search-product-item' 
             onClick={
                 () => {
-                    console.log('hello')
+                    console.log(cartItems)
                 }
             }
         >
