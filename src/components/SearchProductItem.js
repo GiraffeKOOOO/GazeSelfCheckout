@@ -4,10 +4,6 @@ import Grid from '@mui/material/Grid';
 
 import '../css/SearchProductItem.css';
 
-import apple from '../media/apple.png';
-import banana from '../media/banana.png';
-import watermelon from '../media/watermelon.png';
-
 function SearchProductItem(props) {
     return (
         <Button 
@@ -15,7 +11,7 @@ function SearchProductItem(props) {
             id='search-product-item' 
             onClick={
                 () => {
-                    console.log(props.productName)
+                    console.log('hello')
                 }
             }
         >

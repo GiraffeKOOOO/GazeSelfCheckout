@@ -6,7 +6,7 @@ import PayScreen from './screens/PayScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import ReceiptScreen from './screens/ReceiptScreen';
 import SearchScreen from './screens/SearchScreen';
-import ProductCategoryPage from './components/ProductCategoryPage';
+import ProductCategoryPage from './screens/ProductCategoryPage';
 import CartProvider  from './components/CartContext';
 
 function App() {

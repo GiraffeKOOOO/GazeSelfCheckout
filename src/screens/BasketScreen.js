@@ -6,13 +6,13 @@ import PayButton from '../components/PayButton';
 import BackStartButton from '../components/BackStartButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BasketItem from '../components/BasketItem';
-
 import '../css/BasketScreen.css';
 
 import apple from '../media/apple.png';
 import banana from '../media/banana.png';
 
 function BasketScreen() {
+
   return (
       <>
         <Grid container id='basket-page-grid'>
