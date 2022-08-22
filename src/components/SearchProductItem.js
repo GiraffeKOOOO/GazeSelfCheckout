@@ -27,6 +27,7 @@ function SearchProductItem(props) {
                 >
                     <img src={props.productImage} alt="itemButtonImage" id='item-button-image'/>
                     <p id='item-button-text' className='selected-font'>{props.productName}</p>
+                    <p id='item-price-text' className='selected-font'>Price: £{props.productPrice}</p>
             </Grid>        
         </Button>
     );

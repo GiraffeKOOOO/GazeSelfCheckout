@@ -10,15 +10,8 @@ import CartContext from '../components/CartContext';
 
 import '../css/BasketScreen.css';
 
-import apple from '../media/apple.png';
-import banana from '../media/banana.png';
-
 function BasketScreen() {
   const { cartItems, cartTotal, cartQuantity } = useContext(CartContext);
-
-  function addTrailingZeros(num, totalLength) {
-    return String(num).padEnd(totalLength, '0');
-  }
 
   return (
       <>
