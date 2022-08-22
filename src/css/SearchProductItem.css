@@ -20,3 +20,10 @@
     font-size: 22px;
     margin: 0px;
 }
+
+#quantity-select-modal-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

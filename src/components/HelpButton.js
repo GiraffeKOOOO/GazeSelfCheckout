@@ -23,14 +23,14 @@ function HelpButton() {
                 timeout: 500,
                 }}
             >
-                    <Fade in={open}>
-                        <Box>
-                            <HelpScreen
-                                handleClose={handleClose}
-                            />
-                        </Box>
-                    </Fade>
-                </Modal>
+                <Fade in={open}>
+                    <Box>
+                        <HelpScreen
+                            handleClose={handleClose}
+                        />
+                    </Box>
+                </Fade>
+            </Modal>
         </>
     );
   }

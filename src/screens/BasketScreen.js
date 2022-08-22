@@ -109,7 +109,7 @@ function BasketScreen() {
               justifyContent="center" 
               alignItems="flex-end"
             >
-                <PayButton/>
+                <PayButton cartQuantity={cartQuantity} />
             </Grid>
           </Grid>
 

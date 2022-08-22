@@ -1,0 +1,80 @@
+#quantity-select-grid {
+    width: 1500px;
+    height: 800px;
+    background-color: white;
+}
+
+#quantity-title-grid-item {
+    background-color: #48C7FF;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#quantity-cancel-grid {
+    height: 700px
+}
+
+#quantity-confirm-grid {
+    height: 700px
+}
+
+#quantity-instruction-text {
+    font-size: 35px;
+    margin: 10px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+/* --------- */
+
+#cancel-modal-button {
+    width: 95%;
+    height: 80px;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    background-color: #48C7FF;
+}
+
+#cancel-modal-button:hover {
+    background-color: #00aef8;
+}
+
+#confirm-modal-button {
+    width: 95%;
+    height: 80px;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    background-color: #70fa77;
+}
+
+#confirm-modal-button:hover {
+    background-color: #64d86a;
+}
+
+/* --------- */
+
+
+#quantity-input-bar {
+    font-size: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+#keyboard-row-1 {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#keyboard-row-2 {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#keyboard-row-3 {
+    width: 100%;
+    margin-top: 40px;
+}
