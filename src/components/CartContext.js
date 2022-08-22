@@ -59,11 +59,11 @@ export function CartProvider({ children }) {
             setCartItems((prevState) => [...prevState, {name, price, quantity}])
             calculateTotal(price*quantity)
         }
-        calculateCartQuantity()
+        calculateCartQuantity(quantity)
     }
 
-    const calculateCartQuantity = () => {
-        setCartQuantity(cartItems.reduce((accumulator,item) => accumulator + item.quantity, 1));
+    const calculateCartQuantity = (initialQuantity) => {
+        setCartQuantity(cartItems.reduce((accumulator,item) => accumulator + item.quantity, initialQuantity));
     }
 
     const clearCart = () => {
