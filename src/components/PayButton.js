@@ -4,9 +4,12 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 import '../css/PayButton.css';
 
-function PayButton() {
+function PayButton(props) {
     return (
-        <Button variant="outlined" id='pay-button' 
+        <Button 
+            variant="outlined" 
+            id={props.cartQuantity > 0 ? 'pay-button' : 'pay-button-disabled'}
+            disabled={props.cartQuantity > 0 ? false : true} 
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="pay_screen" }, 250)

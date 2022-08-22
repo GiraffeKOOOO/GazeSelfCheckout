@@ -1,0 +1,12 @@
+#quantity-button {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #48C7FF;
+    color: black;
+    font-size: 35px;
+}
+
+#quantity-button:hover {
+    background-color: #00aef8;
+}

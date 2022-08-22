@@ -24,7 +24,7 @@ function SearchScreen() {
 
     const keyboardRow1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
     const keyboardRow2 = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const products = [{name: 'banana', image: banana}, {name: 'apple', image: apple}, {name: 'watermelon', image: watermelon}, {name: 'carrot', image: carrot}]
+    const products = [{name: 'banana', price: 0.60, category: 'Fruit', image: banana}, {name: 'apple', price: 0.80, category: 'Fruit', image: apple}, {name: 'watermelon', price: 1.00, category: 'Fruit', image: watermelon}, {name: 'carrot', price: 0.40, category: 'Vegetables', image: carrot}]
 
     return (
         <>
@@ -106,7 +106,7 @@ function SearchScreen() {
                             >
                                 {
                                     products.filter(product => product.name.includes(searchString)).slice(0,3).map((item, index) => (
-                                            <SearchProductItem key={index} productName={item.name} image={item.image}/>
+                                            <SearchProductItem key={index} productName={item.name} productPrice={item.price} productImage={item.image}/>
                                         )
                                     )
                                 }

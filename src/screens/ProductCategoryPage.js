@@ -3,20 +3,15 @@ import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import SearchBackButton from '../components/SearchBackButton';
 import SearchProductItem from '../components/SearchProductItem';
-
-import apple from '../media/apple.png';
-import banana from '../media/banana.png';
-import watermelon from '../media/watermelon.png';
-import carrot from '../media/carrot.png';
+import ProductData from '../data/ProductData';
 
 import '../css/ProductCategoryPage.css';
 
 function ProductCategoryPage() {
     const queryParams = new URLSearchParams(window.location.search)
     const category = queryParams.get('category');
-
-    const products = [{name: 'Banana', price: 0.60, category: 'Fruit', image: banana}, {name: 'Apple', price: 0.80, category: 'Fruit', image: apple}, {name: 'Watermelon', price: 1.00, category: 'Fruit', image: watermelon}, {name: 'Carrot', price: 0.40, category: 'Vegetables', image: carrot}]
-
+    const products = ProductData.products
+    
     return (
         <>
             <Grid
