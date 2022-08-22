@@ -50,6 +50,7 @@ function SearchProductItem(props) {
                                 handleClose={handleClose}
                                 productName={props.productName} 
                                 productPrice={props.productPrice}
+                                productImage={props.productImage}
                             />
                         </Box>
                     </Fade>

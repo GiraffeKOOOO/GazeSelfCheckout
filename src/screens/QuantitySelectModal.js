@@ -144,7 +144,7 @@ function QuantitySelectModal(props) {
                                     id='confirm-modal-button' 
                                     onClick={
                                         () => {
-                                            addToCart(props.productName, props.productPrice, quantity)
+                                            addToCart(props.productName, props.productPrice, quantity, props.productImage)
                                             setTimeout(() => { props.handleClose() }, 150)
                                             setTimeout(() => { window.location.href="../basket_screen" }, 550)
                                         }

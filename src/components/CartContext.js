@@ -46,7 +46,7 @@ export function CartProvider({ children }) {
         window.localStorage.setItem('cartQuantity', cartQuantity);
     }, [cartQuantity]);
 
-    const addToCart = (name, price, quantity) => {
+    const addToCart = (name, price, quantity, image) => {
         const exists = cartItems.find(element => element.name === name)
         if (exists) {
             setCartItems(
@@ -56,7 +56,7 @@ export function CartProvider({ children }) {
             )
             calculateTotal(price*quantity)
         } else {
-            setCartItems((prevState) => [...prevState, {name, price, quantity}])
+            setCartItems((prevState) => [...prevState, {name, price, quantity, image}])
             calculateTotal(price*quantity)
         }
         calculateCartQuantity(quantity)
