@@ -45,3 +45,9 @@
     height: 600px;
     margin-bottom: 20px;
 }
+
+#video-player {
+    width: 900px;
+    height: 600px;
+    display: block;
+}

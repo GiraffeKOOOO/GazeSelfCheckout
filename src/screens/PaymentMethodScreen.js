@@ -10,6 +10,20 @@ import CartContext from '../components/CartContext';
 
 import '../css/PaymentMethodScreen.css';
 
+function addZeroes(number) {
+    var integer = Number(number);
+    
+    if (isNaN(integer)) {
+        return 0;
+    }
+
+    if (String(integer).split(".").length < 2 || String(integer).split(".")[1].length<=2 ){
+      integer = integer.toFixed(2);
+    }
+
+    return integer;
+  }
+
 function PaymentMethodScreen() {
     const queryParams = new URLSearchParams(window.location.search)
     const type = queryParams.get('type');
@@ -42,7 +56,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{addZeroes(cartTotal)}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your card</p>
                               </Grid>
                           </Grid>
@@ -104,7 +118,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{addZeroes(cartTotal)}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your gift card</p>
                               </Grid>
                           </Grid>
@@ -166,7 +180,7 @@ function PaymentMethodScreen() {
                                   justifyContent="center"
                                   alignItems="center"
                               >
-                                  <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
+                                  <h1 id='total-string-value' className='selected-font'>Total £{addZeroes(cartTotal)}</h1>
                                   <p id='payment-instructions-text' className='selected-font'>Please pay using your coupon</p>
                               </Grid>
                           </Grid>

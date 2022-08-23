@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import HelpButton from '../components/HelpButton';
 import StartButton from '../components/StartButton';
@@ -6,6 +6,25 @@ import StartButton from '../components/StartButton';
 import '../css/StartScreen.css';
 
 function StartScreen() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    getVideo();
+  }, [videoRef]);
+
+  const getVideo = () => {
+    navigator.mediaDevices
+      .getUserMedia({ video: { width: 1200, height: 800 } })
+      .then(stream => {
+        let video = videoRef.current;
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch(err => {
+        console.error("error:", err);
+      });
+  };
+
   return (
       <>
         <Grid container id='first-row'>
@@ -35,7 +54,12 @@ function StartScreen() {
         <Grid container id='second-row'>
           <Grid item xs={2}/>
           <Grid item xs={8}>
-            <div id='placeholder'></div>
+            <div id='placeholder'>
+              <video
+                ref={videoRef}
+                id="video-player"
+              />
+            </div>
           </Grid>
           <Grid item xs={2}/>
             <StartButton/>

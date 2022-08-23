@@ -7,6 +7,20 @@ import CartContext from '../components/CartContext';
 
 import '../css/PayScreen.css';
 
+function addZeroes(number) {
+    var integer = Number(number);
+    
+    if (isNaN(integer)) {
+        return 0;
+    }
+
+    if (String(integer).split(".").length < 2 || String(integer).split(".")[1].length<=2 ){
+      integer = integer.toFixed(2);
+    }
+
+    return integer;
+  }
+
 function PayScreen() {
     const { cartTotal } = useContext(CartContext);
 
@@ -35,7 +49,7 @@ function PayScreen() {
                             justifyContent="center"
                             alignItems="center"
                         >
-                            <h1 id='total-string-value' className='selected-font'>Total £{cartTotal}</h1>
+                            <h1 id='total-string-value' className='selected-font'>Total £{addZeroes(cartTotal)}</h1>
                             <p id='payment-instructions-text' className='selected-font'>Please select a method of payment</p>
                         </Grid>
                     </Grid>
