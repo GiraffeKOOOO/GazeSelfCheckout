@@ -10,6 +10,20 @@ import CartContext from '../components/CartContext';
 
 import '../css/BasketScreen.css';
 
+function addZeroes(number) {
+    var number = Number(number);
+    
+    if (isNaN(number)) {
+        return 0;
+    }
+
+    if (String(number).split(".").length < 2 || String(number).split(".")[1].length<=2 ){
+      number = number.toFixed(2);
+    }
+
+    return number;
+  }
+
 function BasketScreen() {
   const { cartItems, cartTotal, cartQuantity } = useContext(CartContext);
 
@@ -69,7 +83,7 @@ function BasketScreen() {
                     alignItems="center"
                   >
                     <Grid item><h1 className='cart-total-text'>Subtotal</h1></Grid>
-                    <Grid item><h1 className='cart-total-text'>£{cartTotal}</h1></Grid>
+                    <Grid item><h1 className='cart-total-text'>£{addZeroes(cartTotal)}</h1></Grid>
                   </Grid>
                 </Grid>            
             </Grid>
