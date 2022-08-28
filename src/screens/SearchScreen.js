@@ -11,11 +11,7 @@ import SearchProductItem from '../components/SearchProductItem';
 import KeyboardButton from '../components/KeyboardButton';
 import SpacebarButton from '../components/SpacebarButton';
 import BackspaceButton from '../components/BackspaceButton';
-
-import apple from '../media/apple.png';
-import banana from '../media/banana.png';
-import watermelon from '../media/watermelon.png';
-import carrot from '../media/carrot.png';
+import ProductData from '../data/ProductData';
 
 import '../css/SearchScreen.css';
 
@@ -24,7 +20,7 @@ function SearchScreen() {
 
     const keyboardRow1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
     const keyboardRow2 = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const products = [{name: 'banana', price: 0.60, category: 'Fruit', image: banana}, {name: 'apple', price: 0.80, category: 'Fruit', image: apple}, {name: 'watermelon', price: 1.00, category: 'Fruit', image: watermelon}, {name: 'carrot', price: 0.40, category: 'Vegetables', image: carrot}]
+    const products = ProductData.products
 
     return (
         <>

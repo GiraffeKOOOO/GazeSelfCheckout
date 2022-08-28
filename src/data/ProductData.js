@@ -6,25 +6,25 @@ import carrot from '../media/carrot.png';
 const ProductData = {
     products: [
         {
-            name: 'Banana',
+            name: 'banana',
             price: 0.60,
             category: 'Fruit',
             image: banana,
         },
         {
-            name: 'Apple',
+            name: 'apple',
             price: 0.80,
             category: 'Fruit',
             image: apple,
         },
         {
-            name: 'Watermelon',
+            name: 'watermelon',
             price: 1.00,
             category: 'Fruit',
             image: watermelon,
         },
         {
-            name: 'Carrot',
+            name: 'carrot',
             price: 0.40,
             category: 'Vegetables',
             image: carrot,
