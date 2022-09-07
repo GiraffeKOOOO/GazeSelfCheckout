@@ -14,6 +14,7 @@ function HelpScreen(props) {
                 container
                 direction="column" 
                 id='help-screen-grid'
+                data-testid="helpScreenTest" 
             >
                 <Grid item id='help-title-grid-item'>
                     <Grid

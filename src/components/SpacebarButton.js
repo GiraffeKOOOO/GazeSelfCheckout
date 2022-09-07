@@ -8,6 +8,7 @@ function SpacebarButton(props) {
         <Button 
             variant="outlined" 
             id='spacebar-button' 
+            data-testid="spacebarButtonTest"
             onClick={
                 () => {
                     props.setSearchString(props.searchString + ' ')

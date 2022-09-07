@@ -8,7 +8,8 @@ function BackBasketButton() {
     return (
         <Button 
             variant="outlined" 
-            id='back-basket-button' 
+            id='back-basket-button'
+            data-testid="backBasketButtonTest" 
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="basket_screen" }, 250)

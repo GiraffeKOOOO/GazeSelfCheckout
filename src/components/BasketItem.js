@@ -25,6 +25,7 @@ function BasketItem(props) {
             justifyContent="center"
             alignItems="center"
             id="basket-item-container"
+            data-testid="basketItemTest" 
             >
             <Grid item xs={1}><img src={props.itemImage} alt="itemImage" id='basket-item-image'/></Grid>
             <Grid item xs={6.8}><p id='basket-item-name' className='selected-font'>{props.itemName}</p></Grid>

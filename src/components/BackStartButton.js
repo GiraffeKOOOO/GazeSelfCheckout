@@ -9,6 +9,7 @@ function BackStartButton() {
         <Button 
             variant="outlined" 
             id='back-start-button' 
+            data-testid="backStartButtonTest" 
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="/" }, 250)

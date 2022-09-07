@@ -9,6 +9,7 @@ function PayButton(props) {
         <Button 
             variant="outlined" 
             id={props.cartQuantity > 0 ? 'pay-button' : 'pay-button-disabled'}
+            data-testid="payButtonTest"
             disabled={props.cartQuantity > 0 ? false : true} 
             onClick={
                 () => {

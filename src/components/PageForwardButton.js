@@ -9,6 +9,7 @@ function PageForwardButton() {
             <Button 
                 variant="outlined" 
                 id='page-forward-button'
+                data-testid="pageForwardButtonTest"
                 onClick={ () => console.log('hello') }
             >
                 <div id='forward-triangle-div'/>

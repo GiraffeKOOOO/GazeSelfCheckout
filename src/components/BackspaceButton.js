@@ -8,7 +8,8 @@ function BackspaceButton(props) {
     return (
         <Button 
             variant="outlined" 
-            id='backspace-button' 
+            id='backspace-button'
+            data-testid="backspaceButtonTest"  
             onClick={
                 () => {
                     props.setSearchString(props.searchString.slice(0, -1));

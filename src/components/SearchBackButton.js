@@ -9,6 +9,7 @@ function SearchBackButton() {
         <Button 
             variant="outlined" 
             id='search-back-button' 
+            data-testid="searchBackButtonTest" 
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="/basket_screen" }, 250)

@@ -10,7 +10,8 @@ function ReceiptButton(props) {
     return (
         <Button 
             variant="outlined" 
-            id='receipt-button' 
+            id='receipt-button'
+            data-testid="receiptButtonTest" 
             onClick={
                 () => {
                     clearCart()
