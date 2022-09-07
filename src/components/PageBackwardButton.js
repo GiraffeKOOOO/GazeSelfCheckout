@@ -9,6 +9,7 @@ function PageBackwardButton() {
             <Button 
                 variant="outlined" 
                 id='page-backward-button'
+                data-testid="pageBackwardButtonTest"
                 onClick={ () => console.log('hello') }
             >
                 <div id='backward-triangle-div'/>

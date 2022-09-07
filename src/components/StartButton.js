@@ -5,7 +5,7 @@ import '../css/StartButton.css';
 
 function StartButton() {
     return (
-        <Button variant="contained" id='start-button' onClick={
+        <Button variant="contained" id='start-button' data-testid="startButtonTest"   onClick={
             () => {
               setTimeout(() => { window.location.href="basket_screen" }, 250)
             }

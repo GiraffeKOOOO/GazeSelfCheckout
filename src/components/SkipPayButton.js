@@ -8,7 +8,8 @@ function SkipPayButton() {
     return (
         <Button 
             variant="outlined" 
-            id='skip-pay-button' 
+            id='skip-pay-button'
+            data-testid="skipPayButtonTest"  
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="/receipt_screen" }, 250)

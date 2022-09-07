@@ -5,7 +5,7 @@ import '../css/ProductButton.css';
 
 function ProductButton(props) {
     return (
-        <Button variant="outlined" id='product-button' 
+        <Button variant="outlined" id='product-button' data-testid="productButtonTest"
             onClick={
                 () => {
                     if(props.ProductName === 'Search Item'){

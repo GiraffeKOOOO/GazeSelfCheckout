@@ -14,7 +14,7 @@ function HelpButton() {
 
     return (
         <>
-            <Button variant="outlined" id='help-button' onClick={handleOpen}>Help</Button>
+            <Button variant="outlined" id='help-button' data-testid="helpButtonTest" onClick={handleOpen}>Help</Button>
             <Modal
                 open={open}
                 onClose={handleClose}

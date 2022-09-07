@@ -32,6 +32,7 @@ function SearchProductItem(props) {
             <Button 
                 variant="outlined" 
                 id='search-product-item' 
+                data-testid="searchProductItemTest"
                 onClick={
                     () => {
                         handleOpen()

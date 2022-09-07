@@ -8,7 +8,8 @@ function BackPayButton() {
     return (
         <Button 
             variant="outlined" 
-            id='back-pay-button' 
+            id='back-pay-button'
+            data-testid="backPayButtonTest"  
             onClick={
                 () => {
                     setTimeout(() => { window.location.href="/pay_screen" }, 250)

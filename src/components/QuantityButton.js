@@ -8,6 +8,7 @@ function QuantityButton(props) {
         <Button 
             variant="outlined" 
             id='quantity-button' 
+            data-testid="quantityButtonTest"
             onClick={
                 () => {
                     props.setQuantity(props.number)

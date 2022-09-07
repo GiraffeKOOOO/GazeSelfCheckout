@@ -8,6 +8,7 @@ function KeyboardButton(props) {
         <Button 
             variant="outlined" 
             id='keyboard-button' 
+            data-testid="keyboardButtonTest"
             onClick={
                 () => {
                     props.setSearchString(props.searchString + props.letter)
