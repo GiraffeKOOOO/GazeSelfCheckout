@@ -20,6 +20,7 @@ function ProductCategoryPage() {
                 justifyContent="center"
                 alignItems="center"
                 id='search-screen-container'
+                data-testid="productCategoryPageTest" 
             >
     
                 <Grid item id='category-title-row'>

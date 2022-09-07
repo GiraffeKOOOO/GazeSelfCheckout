@@ -27,7 +27,7 @@ function StartScreen() {
 
   return (
       <>
-        <Grid container id='first-row'>
+        <Grid container id='first-row' data-testid="startScreenTest">
           <Grid item xs={2}/>
           <Grid item xs={8}>
 

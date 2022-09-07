@@ -30,6 +30,7 @@ function SearchScreen() {
                 justifyContent="center"
                 alignItems="center"
                 id='search-screen-container'
+                data-testid="startScreenTest"
             >
     
                 <Grid item id='search-title-row'>
